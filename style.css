@@ -14,6 +14,7 @@ body {
 }
 
 a {
+    color: white;
     text-decoration: none;
 }
 
@@ -28,11 +29,18 @@ ul {
 header {
     display: flex;
     align-items: center;
-    background-color: #413f4480;
-    padding: 2rem;
+    background-color: #7a777780;
+    padding: 0px;
+    opacity: 0.7;
 }
 
 header img {
+    width: 15rem;
+    height: auto;
+    opacity: 0.5;
+}
+
+header p {
     display: none;
 }
 .banner {
@@ -50,25 +58,56 @@ nav {
 }
 
 nav ul {
-    padding: 5px;
-    margin: 0;
     display: flex;
-    justify-content: space-around;
-    
-}
-
-nav li {
-    width: 0.15rem;
+    justify-content: space-between;
 }
 
 .nav-btn {
-    min-width: 150px;
+    border-radius: 2%;
+    flex-grow: 1;
+    padding: 0px;
+    margin: 0px;
+    height: 3rem;
+    box-shadow: rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(255,255,255,0.25) 0px 1px 0px, inset rgba(0,0,0,0.25) 0px 0px 0px, inset rgba(255,255,255,0.03) 0px 20px 0px, inset rgba(0,0,0,0.15) 0px -20px 20px, inset rgba(255,255,255,0.05) 0px 20px 20px;
+    transition: all 0.1s linear;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+.nav-pad {
+    width: 0.2rem;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.205);
+    font-weight: bold;
+
+    padding: 0px;
+    margin: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+;
+
+
+
+}
+
+/*.nav-btn {
     color: white;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.301);
     border-radius: 2%;
-    padding: 0.4rem;
-    flex-grow: 1;
+    padding: 0px;
+    flex-grow: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,8 +116,10 @@ nav li {
 .nav-btn:hover {
     background-color: rgba(255, 255, 255, 0.401);
 }
+*/
 
 .center {
+    margin-top: 7rem;
     display: flex;
     justify-content: space-around;
 
@@ -88,27 +129,60 @@ aside {
     margin-top: 3rem;
     flex: 0.8;
     text-align: center;
+
 }
+
+
 .profile-pic {
-    opacity: 0.8;
+
+    opacity: 1;
+    transition: transform 0.9s, opacity 0.9s;
 }
 
 .block {
-    margin-top: 5rem;
+    margin-top: 3rem;
     flex: 1.2;
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.301);
+    background-color: rgba(255, 255, 255, 0.084);
     padding: 20px;
     margin: 1rem;
 
 }
 
+section {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin-bottom: 0.6rem;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
 .technologies {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: rgba(46, 44, 48, 0.219);
 }
 
 .technologies img {
@@ -171,9 +245,89 @@ section {
     font-size: 0.9rem;
 }
 
+.pop-bottom {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.9s, opacity 0.9s;
+}
+
+.pop-bottom.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 
 footer {
     color: white;
     background-color: rgb(40, 35, 44);
-    margin: 0;
+    margin-top: 3rem;
+}
+
+.contact > p{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.social p {
+
+}
+
+.social-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.html-dict {
+    margin-top: 5rem;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.1rem solid white;
+    font-size: 1.2rem;
+}
+
+.html-dict caption {
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.html-dict thead th:nth-child(1) {
+    width: 15%;
+    background-color: blue;
+}
+
+.html-dict thead th:nth-child(2) {
+    width: 20%;
+    background-color: red;
+}
+
+.html-dict thead th:nth-child(3) {
+    width: 65%;
+    background-color: purple;
+}
+
+.html-dict th, .html-dict td {
+    padding: 2rem;
+    border: 0.1rem solid white;
+}
+
+.html-dict tbody tr:nth-child(odd) {
+    background-color: rgb(82, 82, 83);
+}
+
+
+@media (max-width: 767px) {
+    body {
+        background-color: red;
+    }
 }
