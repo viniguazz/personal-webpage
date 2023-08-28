@@ -17,60 +17,113 @@
     </header>
     <nav>
         <ul>
-            <li>
+            <li class="nav-btn">
                 <a href="">Home</a>
             </li>
-            <li>
+            <li></li>
+            <li class="nav-btn"
                 <a href="">Portfolio</a>
             </li>
-            <li>
+            <li></li>
+            <li class="nav-btn">
                 <a href="">Personal Blog</a>
             </li>
-            <li>
+            <li></li>
+            <li class="nav-btn">
                 <a href="/html_dict.html">HTML Element Dictionary</a>
             </li>
-            <li>
+            <li></li>
+            <li class="nav-btn">
                 <a href="">Sign Up</a>
             </li>
-            <li>
+            <li></li>
+            <li class="nav-btn">
                 <a href="">Sign In</a>
             </li>
-            <li>
-                <a href="">Contact</a>
+            <li></li>
+            <li class="nav-btn">
+                <a href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
     <div class="center">
-        <div class="block"></div>
+        <div class="block">
+            <main>
+                <section>
+                    <h1>About me</h1>
+                    <p>I'm absolute passionate about understanding and using technology </p>
+                </section>
+                <section>
+                    <h1>Interests</h1>
+                    <p>My interests range from very low-level hardware concepts to high level ones. From OP Codes and assembly to Python. </p>
+                </section>
+                <section>
+                    <h1>Courses Taken</h1>
+                    <p>So far, my studies covered a substantial array of topics such as computer architecture, PHP, Python, JS, Typescript, Java, Operating Systems, C, C#, Dart /p>
+                </section>
+        
+            </main>
+        </div>
         <aside>
-            <img src="../resources/profile-picture.png" alt="VGD's Profile Photo">
+            <img class="profile-pic" src="../resources/profile-picture.png" alt="VGD's Profile Photo">
             <p>Computer Information Systems - <a href="https://ufsc.br/">UFSC</a></p>
             <p>C++, .dotnet, Python, JS Web dev and Security Analyst</p>
             <a href="https://github.com/viniguazz/">Github</a>
         </aside>
     </div>
-    <main>
-        <section>
-            <h1>About me</h1>
-            <p>I'm absolute passionate about understanding and using technology </p>
-        </section>
-        <section>
-            <h1>Interests</h1>
-            <p>My interests range from hardware concepts to high level ones. From OP Codes and assembly to Python.</p>
-        </section>
-        <section>
-            <h1>Courses Taken</h1>
-            <p>So far, my studies covered a substantial array of topics such as computer architecture, PHP, Python, JS, Typescript, Java, Operating Systems, C, C#, Dart /p>
-        </section>
 
-    </main>
-    <footer>
+    <div class="skill-section">
+        <div class="skill-header">
+            <p>Technologies / Skills</p>
+        </div>
+        <div class="technologies">
+            <div class="skill">
+                <img src="./resources/Python.svg" alt="">
+                <p>python</p>
+                <div id="python-level"></div>
+            </div>
+            <div class="skill">
+                <img src="" alt="">
+                <p>html</p>
+                <div id="html-level"></div>
+            </div>
+            <div class="skill">
+                <img src="./resources/html5-logo-opencode-css-8.png" alt="">
+                <p>css</p>
+                <div id="css-level"></div>
+            </div>
+            <div class="skill">
+                <img src="./resources/JS.svg" alt="">
+                <p>js</p>
+                <div id="js-level"></div>
+            </div>
+            <div class="skill">
+                <img src="./resources/CPlusPlus.svg" alt="">
+                <p>c++</p>
+                <div id="cpp-level"></div>
+            </div>
+            <div class="skill">
+                <img src="" alt="">
+                <p>linux</p>
+                <div id="linux-level"></div>
+            </div>
+            <div class="skill">
+                <img src="" alt="">
+                <p>networks</p>
+                <div id="net-level"></div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <footer id="contact">
         <p>Webpage by Vinicius Guazzelli Dias</p>
         <address>
             <p>+55-48991056105</p>
             <p>viniguazz@hotmail.com</p>
         </address>
     </footer>
-    
+    <script src="app.js"></script>
 </body>
 </html>
