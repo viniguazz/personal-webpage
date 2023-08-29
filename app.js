@@ -2,7 +2,6 @@
 
 window.addEventListener('scroll', () => {
     const items = document.querySelectorAll('.pop-bottom');
-    console.log(items);
     items.forEach(item => {
         const itemBottom = item.getBoundingClientRect().bottom;
         const windowHeight = window.innerHeight;
@@ -14,14 +13,11 @@ window.addEventListener('scroll', () => {
     });
 });
 
+//capturing and saving tags in the local storage
 
-const htmlElements = [
-    {
-        tag: '<canvas>',
-        description: 'blabla'
-    }
-];
+const htmlElements = Array.from(document.querySelectorAll('*'));
+const tagNames = htmlElements.map(element => element.tagName.toLowerCase());
+const uniqueTagNames = [...new Set(tagNames)];
+console.log(uniqueTagNames)
 
-htmlElements.forEach(item => {
-
-})
+localStorage.setItem('htmlTags', JSON.stringify(uniqueTagNames));
