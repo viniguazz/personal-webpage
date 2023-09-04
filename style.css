@@ -215,28 +215,64 @@ section p {
     text-transform: uppercase;
 }
 
+@keyframes fill-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 #python-level {
     height: 10px;
     width: 100%;
     background-color: lime;
+    animation: fill-bar 5s forwards;
+
 }
 
 #html-level {
     height: 10px;
     width: 100%;
     background-color: lime;
+    animation: fill-bar 5s forwards;
 }
 
 #css-level {
     height: 10px;
     width: 100%;
     background-color: lime;
+    animation: fill-bar 5s forwards;
 }
 
 #js-level {
     height: 10px;
     width: 100%;
     background-color: lime;
+    animation: fill-bar 5s forwards;
+}
+
+#cpp-level {
+    height: 10px;
+    width: 100%;
+    background-color: lime;
+    animation: fill-bar 5s forwards;
+}
+
+#linux-level {
+    height: 10px;
+    width: 100%;
+    background-color: lime;
+    animation: fill-bar 5s forwards;
+}
+
+#net-level {
+    height: 10px;
+    width: 100%;
+    transition: width 0.4s ease;
+    background-color: lime;
+    animation: fill-bar 5s forwards;
 }
 
 .skill > img, .skill > p {
@@ -263,6 +299,10 @@ footer {
     margin-top: 3rem;
 }
 
+.contact {
+    margin-top: 1.5rem;
+}
+
 .contact > p{
     text-align: center;
     text-transform: uppercase;
@@ -274,23 +314,55 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
-.social p {
 
+.social-frame {
+    align-items: flex-end;
 }
+
 
 .social-frame {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
+}
+
+.social-frame {
+    font-weight: bold;
+}
+
+.social-frame img {
+    width: 10rem;
+    height: 10rem;
+}
+
+
+footer {
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    padding-left: 2rem;
+}
+
+
+address p {
+    display: inline-block;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .html-dict {
     margin-top: 5rem;
     table-layout: fixed;
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     border: 0.1rem solid white;
     font-size: 1.2rem;
@@ -303,17 +375,20 @@ footer {
 
 .html-dict thead th:nth-child(1) {
     width: 15%;
-    background-color: blue;
+    background-color: rgba(161, 161, 175, 0.865);
+    font-weight: bold;
 }
 
 .html-dict thead th:nth-child(2) {
     width: 20%;
-    background-color: red;
+    background-color: rgba(161, 161, 175, 0.865);
+    font-weight: bold;
 }
 
 .html-dict thead th:nth-child(3) {
     width: 65%;
-    background-color: purple;
+    background-color: rgba(161, 161, 175, 0.865);
+    font-weight: bold;
 }
 
 .html-dict th, .html-dict td {
@@ -325,9 +400,94 @@ footer {
     background-color: rgb(82, 82, 83);
 }
 
+.menu-toggle {
+    display: none;
+}
 
-@media (max-width: 767px) {
-    body {
-        background-color: red;
+#skill-hide {
+    display:none;
+}
+
+@media (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        background-color: #4e4c4c80;
+        background: linear-gradient(to right, #20202080, rgb(100, 98, 98));
     }
+
+    nav > ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+        /*gap: 0.5rem; */
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    nav ul .nav-pad {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-btn.active {
+        display: flex;
+    }
+
+    .menu-toggle.close {
+        background-color: red;
+
+    }
+
+    .menu-toggle.open {
+        background-color: green;
+    }
+
+    .menu-toggle.close:hover {
+        background-color: rgb(247, 55, 55);
+
+    }
+
+    .menu-toggle.open:hover {
+        background-color: rgb(43, 160, 43);
+    }
+    .center {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .social {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skill-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-header p {
+        display: none;
+    }
+
+    #skill-hide {
+        display: block;
+    }
+
+    .html-dict th, .html-dict td {
+        padding: 3rem;
+        padding-left: 0.5rem;
+        border: 0.1rem solid white;
+    }
+
+
 }

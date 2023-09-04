@@ -13,6 +13,32 @@ window.addEventListener('scroll', () => {
     });
 });
 
+
+// toggle menu
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const toggle = document.querySelector('.menu-toggle');
+
+    navBtns.forEach(function(btn) {
+       btn.classList.toggle('active');
+    });
+
+    if (toggle.textContent === 'Close Menu') {
+        toggle.innerHTML = '<a href="#">Open Menu</a>'
+        toggle.classList.remove('closed');
+        toggle.classList.add('open');
+
+    } else {
+        toggle.innerHTML = '<a href="#">Close Menu</a>'
+        toggle.classList.remove('open');
+        toggle.classList.add('close');
+    }
+
+});
+
+
 //capturing and saving tags in the local storage
 
 const htmlElements = Array.from(document.querySelectorAll('*'));
